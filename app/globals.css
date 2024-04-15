@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .btn-primary {
+    @apply rounded-lg bg-gradient-to-r from-[#095AE5] to-[#062997];
+  }
+
+  .info {
+    @apply flex flex-col items-center;
+  }
+  .info p {
+    @apply text-[#E1E6F0] text-3xl w-[20rem] text-center;
+  }
+  .info span {
+    @apply border-[3px] border-[#8F98B2] mb-4 border-solid p-8 rounded-full flex items-center justify-center;
+  }
+  .info h3 {
+    @apply text-[#8F98B2] w-[20rem] text-xl text-center pt-4;
+  }
+  .blue-line {
+    position: relative;
+  }
+  .blue-line::before {
+    content: "";
+    position: absolute;
+    @apply w-full h-1 bg-gradient-to-r from-[#0D2550] to-[#101218];
+    top: 0;
+    left: 50%;
+    z-index: 100;
+  }
+  .blue-line::after {
+    content: "";
+    position: absolute;
+    @apply w-full h-1 bg-gradient-to-l from-[#0D2550] to-[#101218];
+    top: 0;
+    right: 50%;
+    z-index: 100;
+  }
+  .dot-li {
+    position: relative;
+    margin-left: 1.5rem;
+  }
+  .dot-li::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.5rem;
+    background-color: #8f98b2;
+    border-radius: 100%;
+  }
+  .setting-dot::before {
+    content: "";
+    background-color: white;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    z-index: -100;
+    background-size: auto 100%;
+    position: relative;
+    min-height: 100dvh;
+  }
+}
